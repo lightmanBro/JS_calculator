@@ -1,0 +1,157 @@
+body {
+          font-family: 'Open Sans';
+          background-color: black;
+          font-size: 10px;
+}
+#container {
+          /* margin: 0 auto; */
+          background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.26)), url(banana.jpeg);
+          background-size: 95vh;
+          padding: 50px;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: contain;
+          transform: translate(40% 50%);
+          
+}
+#calculator {
+          width: 320px;
+          height: 630px;
+          margin: 20px auto;
+          top: 10px;
+          border: 10px solid #777 ;
+          box-shadow: 0 .4rem .8rem 0
+          rgba(19, 18, 18, 0.514);
+          background-color: rgba(49, 47, 47, 0.137);
+          backdrop-filter: blur(20px);
+          animation-name: moveInRight;
+          animation-duration: 3s;
+          transform: translate(40% 50%);
+}
+
+#result {
+          height: 150px;
+          border-radius: .5rem;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          background-color: rgb(138, 141, 140);
+          animation-name: moveInRight;
+          animation-duration: 3s;
+          /* transform: scaleX(); */
+}
+
+#history {
+          text-align: right;
+          margin-top: 0;
+          height: 100px;
+          margin-bottom: 0;
+          padding: 10px;
+          font-size: 15px;
+          /* color:; */
+}
+#output {
+          height:100px;
+          width: 100%;
+          font-size: 1.5rem;
+          margin-bottom: 0;
+          background-color: #919191;
+          text-align: right;
+          /* animation-name: moveInRight; */
+          animation-duration: 3s;
+          word-wrap: break-word;
+          word-break: break-all;
+          word-spacing: .2rem;
+}
+
+#keyboard {
+          margin-top: 100px;
+          height: 250px;
+          position: relative;
+}
+@keyframes moveInLeft {
+          /*initial state of the animation*/
+          0% {
+                    opacity: 0;
+                    transform: translateX(-10rem);
+
+          }
+          
+          /* intermediate position of animation*/
+          80% {
+                    transform: translateX(1rem) 
+                    /*rotate(270deg) this is done if you want to text or image to rotate*/ ;
+
+          }
+
+          /* final stage of the animation*/
+          100% {
+                    opacity: 1;
+                    transform: translate(0);
+          }
+}
+
+@keyframes moveInRight{
+          /*initial state of the animation*/
+          0% {
+                    opacity: 0;
+                    transform: translateX(10rem);
+
+          }
+          
+          /* intermediate position of animation*/
+          80% {
+                    transform: translateX(-1rem) ;
+
+          }
+
+          /* final stage of the animation*/
+          100% {
+                    opacity: 1;
+                    transform: translate(0);
+          }
+}
+.operator, .number, .empty{
+          width: 50px;
+          height: 50px;
+          margin: 15px;
+          top: 0;
+          margin-bottom: 0;
+          float: left;
+          border-radius: 50%;
+          border-width: 0;
+          font-weight: bold;
+          font-size: 15px;
+          animation-name: moveInLeft;
+          animation-duration: 3s;
+          animation-timing-function: ease-in-out;
+}
+
+.number, .operator{
+          cursor: pointer;
+}
+.operator:active, .number:active{
+          font-size: 1.3rem;
+}
+.operator:focus, .number:focus .empty:focus {
+          outline: 0;
+}
+button:nth-child(4){
+          font-size: 2rem;
+          background-color: #20b2aa;
+}
+button:nth-child(8){
+          font-size: 2rem;
+          background-color: #7d93e0;
+}
+button:nth-child(12){
+          font-size: 2rem;
+          background-color: #f08080;
+}
+button:nth-child(16){
+          font-size: 2rem;
+          background: color #ffa500;
+}
+button:nth-child(20){
+          font-size: 2rem;
+          background-color: #9477af;
+}
