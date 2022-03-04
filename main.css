@@ -37,7 +37,6 @@ body {
           background-color: rgb(138, 141, 140);
           animation-name: moveInRight;
           animation-duration: 3s;
-          /* transform: scaleX(); */
 }
 
 #history {
@@ -47,8 +46,8 @@ body {
           margin-bottom: 0;
           padding: 10px;
           font-size: 15px;
-          /* color:; */
 }
+
 #output {
           height:100px;
           width: 100%;
@@ -56,18 +55,19 @@ body {
           margin-bottom: 0;
           background-color: #919191;
           text-align: right;
-          /* animation-name: moveInRight; */
           animation-duration: 3s;
           word-wrap: break-word;
           word-break: break-all;
           word-spacing: .2rem;
 }
 
+
 #keyboard {
           margin-top: 100px;
           height: 250px;
           position: relative;
 }
+
 @keyframes moveInLeft {
           /*initial state of the animation*/
           0% {
@@ -110,6 +110,7 @@ body {
                     transform: translate(0);
           }
 }
+
 .operator, .number, .empty{
           width: 50px;
           height: 50px;
@@ -129,12 +130,23 @@ body {
 .number, .operator{
           cursor: pointer;
 }
+/* added animations to the buttons here */
+button:active {
+          padding: calc(3px);
+}
+button:hover {
+          background-color: #777;
+          color: aqua;
+}
+
 .operator:active, .number:active{
           font-size: 1.3rem;
 }
+
 .operator:focus, .number:focus .empty:focus {
           outline: 0;
 }
+
 button:nth-child(4){
           font-size: 2rem;
           background-color: #20b2aa;
